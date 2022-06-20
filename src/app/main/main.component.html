@@ -1,0 +1,10 @@
+<h2>{{heading}}</h2>
+<p>
+    <input type="text" [value]="property" >
+</p>
+<button (click)="onClick()">submit</button>
+<p>
+    <input type="text" [(ngModel)]="twoWay">
+</p>
+
+    {{twoWay}}
