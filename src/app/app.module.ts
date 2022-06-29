@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { XyzComponent } from './xyz/xyz.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
+import { Observable1Component } from './observable1/observable1.component';
+import { Observebale2Component } from './observebale2/observebale2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     XyzComponent,
-    MainComponent
+    MainComponent,
+    Observable1Component,
+    Observebale2Component
   ],
   imports: [
     BrowserModule,
