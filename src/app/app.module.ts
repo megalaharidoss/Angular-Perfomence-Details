@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
 import { Observable1Component } from './observable1/observable1.component';
 import { Observebale2Component } from './observebale2/observebale2.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { Observebale2Component } from './observebale2/observebale2.component';
     XyzComponent,
     MainComponent,
     Observable1Component,
-    Observebale2Component
+    Observebale2Component,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
