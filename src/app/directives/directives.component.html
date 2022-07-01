@@ -1,0 +1,48 @@
+<!-- =====================
+                     DIRECTIVES
+                ===================== -->
+<!-- =>Three types of DIRECTIVES
+                    1)Structurel DIRECTIVES
+                      i)*ngIf
+                      ii)*ngSwitchCase
+                      (When the expressions match, the given NgSwitchCase template is rendered.
+                       If multiple match expressions match the switch expression value, all of them are displayed.)
+                      iii)*ngFor
+
+                    3)Template DIRECTIVES
+                       i)Components     -->
+<h3 class="title">DIRECTIVES</h3>
+<p>
+   *Structurel Directives
+</p>
+<div *ngIf="users;else noUsersTemplate">Users are present
+   <div *ngFor="let user of users">
+      <div>{{user.name}}</div>
+
+      <div [ngSwitch]="user.gender">
+         <div class="femaleBox" *ngSwitchCase="'f'">{{user.name}}</div>
+         <div class="maleBox" *ngSwitchCase="'m'">{{user.name}}</div>
+         <div class="" *ngSwitchDefault="'m'">{{user.name}}</div>
+
+      </div>
+   </div>
+</div>
+<ng-template #noUsersTemplate>no users found!</ng-template>
+
+<!-- 2)Attribute DIRECTIVES
+                       i)ngStyle
+                       ii)ngClass=>(Adds and removes CSS classes on an HTML element.) -->
+<p>*Attribute Directives</p>
+<div *ngIf="users;else noUsersTemplate">Users are present
+   <div *ngFor="let user of users">
+      <div>{{user.name}}</div>
+
+      <div [ngSwitch]="user.gender">
+         <div class="femaleBox" *ngSwitchCase="'f'">{{user.name}}</div>
+         <div class="maleBox" *ngSwitchCase="'m'" [ngStyle]="{'color':'green'}">{{user.name}}</div>
+         <div class="" *ngSwitchDefault="'m'" [ngStyle]="{'text-decoration':'line-through'}">{{user.name}}</div>
+
+      </div>
+   </div>
+
+</div>
