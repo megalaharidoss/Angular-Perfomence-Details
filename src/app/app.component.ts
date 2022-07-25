@@ -6,6 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'demo';
+  name: string='';
+  childName: string='';
+  
+
+  onChildNameChange(event:string):void{
+    this.childName=event
+  }
+
   //title = 'demo';
   //showLifeCycle:boolean=false;
   ///value: string = 'angular';
