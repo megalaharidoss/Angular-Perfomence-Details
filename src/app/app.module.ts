@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { Observable1Component } from './observable1/observable1.component';
 import { Observebale2Component } from './observebale2/observebale2.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { SearchfilterPipe } from './searchfilter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PipeComponent } from './pipe/pipe.component';
     MainComponent,
     Observable1Component,
     Observebale2Component,
-    PipeComponent
+    PipeComponent,
+    SearchfilterPipe,
+   
   ],
   imports: [
     BrowserModule,

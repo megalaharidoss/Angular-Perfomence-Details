@@ -1,18 +1,18 @@
-<h1 style="text-align:center">Pipes In Angular</h1>
+<!-- <h1 style="text-align:center">Pipes In Angular</h1>
 <p>
     InBuild Pipes
 </p>
-<!-- //without pipe// -->
+
 <div>
     {{day}}
 </div><br><br>
-<!-- with pipe -->
+
 <div>
     {{day | date}}
 </div>
-<!-- parameter (:) -->
+
 <div>
-    {{day | date:'dd-MMM-YYYY'}}
+    {{day | date:'dd-MM-YYYY'}}
 </div><br>
 <div>
     {{ num | number:'6.3-4'}}
@@ -24,14 +24,19 @@
     {{ num | currency:'CAD':'symbol-narrow'}}
 </div><br><br>
 <div>
-    {{'Sabitha KANNan' | titlecase}}
+    {{'Sabitha KANNan' | lowercase}}
 </div><br>
 <div>
-    {{obj | json | uppercase}}
+    {{data | json | uppercase }}
 </div><br>
 <div>
-    {{arr | slice : 3:6}}
+    {{arr | slice : 2:6}}
 </div><br>
 <div>
-    {{obj | keyvalue | json}}
-</div>
+    {{data | keyvalue | json}}
+</div> -->
+<input type="text" [(ngModel)]="animalName" placeholder="search">
+<h1>Animals List</h1>
+<ul>
+    <li *ngFor="let animal of animals | searchfilter : animalName">{{animal}}</li>
+</ul>
