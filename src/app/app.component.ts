@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  name: string='';
+  childName: string='';
+  
+
+  onChildNameChange(event:string):void{
+    this.childName=event
+  }
+
 }

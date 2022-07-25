@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
-
+import { ChildComponent } from './child/child.component';
+import { AppComponent } from './app.component';
 const routes: Routes = [
  {
-  path:'',redirectTo:"main",pathMatch:"full"
+  path:'',redirectTo:"child",pathMatch:"full"
  },
- {
-path:"main",component:MainComponent
- }
+
+{
+    path:"child",component:ChildComponent
+  },
+  {
+    path:"app",component:AppComponent
+  }
 ];
 
 @NgModule({
