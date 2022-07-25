@@ -1,0 +1,37 @@
+<h1 style="text-align:center">Pipes In Angular</h1>
+<p>
+    InBuild Pipes
+</p>
+<!-- //without pipe// -->
+<div>
+    {{day}}
+</div><br><br>
+<!-- with pipe -->
+<div>
+    {{day | date}}
+</div>
+<!-- parameter (:) -->
+<div>
+    {{day | date:'dd-MMM-YYYY'}}
+</div><br>
+<div>
+    {{ num | number:'6.3-4'}}
+</div><br><br>
+<div>
+    {{num1 | percent:'6.4-6'}}
+</div><br>
+<div>
+    {{ num | currency:'CAD':'symbol-narrow'}}
+</div><br><br>
+<div>
+    {{'Sabitha KANNan' | titlecase}}
+</div><br>
+<div>
+    {{obj | json | uppercase}}
+</div><br>
+<div>
+    {{arr | slice : 3:6}}
+</div><br>
+<div>
+    {{obj | keyvalue | json}}
+</div>

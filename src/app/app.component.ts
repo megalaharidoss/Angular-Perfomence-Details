@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,4 +15,13 @@ export class AppComponent {
     this.childName=event
   }
 
+  //title = 'demo';
+  //showLifeCycle:boolean=false;
+  ///value: string = 'angular';
+  constructor(private router:Router){
+
+  }
+  // onShoworHide(): void{
+  //   this.showLifeCycle = !this.showLifeCycle
+  // }
 }
