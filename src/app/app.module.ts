@@ -18,10 +18,12 @@ import { LoginComponent } from './login/login.component';
 import { XyzComponent } from './xyz/xyz.component';
 // import { MainComponent } from './main/main.component';
 import { JwtInterceptor } from './jwt.interceptor';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { MainComponent } from './main/main.component';
 import { Observable1Component } from './observable1/observable1.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { SearchfilterPipe } from './searchfilter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,9 @@ import { PipeComponent } from './pipe/pipe.component';
     ChildComponent,
     XyzComponent,
     Observable1Component,
+    PipeComponent,
+    SearchfilterPipe,
+   
     PipeComponent
 
   ],
@@ -41,7 +46,8 @@ import { PipeComponent } from './pipe/pipe.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    // NgbModule
+    // NgbModule
     // HttpClientModule
   ],
   providers: [
