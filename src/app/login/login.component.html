@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="loginForm">
+        <!-- <a class="brand-logo mb-2" href="javascript:void(0);">
+            <img src="assets/images/logo/logo.eQ.PNG" style="position: absolute; left: 30px; top: 10px;"  alt="brand-logo" height="50"
+              width="100" />
+          </a> -->
+        <div class="shadow card mt-3" style="width:500px;margin-left: 200px;height: 600px;border-radius: 40px;">
+            <div class="card-body" style="background-color: white;border-radius: 40px;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-header " style="background-color:rgb(152, 166, 228)">
+                            <h2>Login</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- <legend>
+                    <button type="button" class="btn btn-primary btn-sm mt-4">GOSCHOOLZ</button>
+                </legend> -->
+                <div class="row mt-2">
+                    <div class="col-sm-12">
+                        <label class="form-label" for="login-email">User Name</label>
+                        <input type="text" formControlName="userName" class="form-control "
+                            [ngClass]="{ 'is-invalid': submitted && f['userName'].errors }" placeholder="Username" />
+                        <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
+                            <div *ngIf="f['userName'].errors['required']">Username is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <label>Password</label>
+                        <input id="password" type="password" class="form-control" formControlName="password"
+                            placeholder="Enter Your Password"
+                            [ngClass]="{ 'is-invalid': submitted && f['password'].errors}">
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">*Required</div>
+                        </div>
+                    </div>
+                </div>
+                <button [disabled]="loading" class="btn btn-primary btn-block mt-5" tabindex="4"
+                    style="border-radius: 10px;" rippleEffect (click)="onsubmit()">
+                    log in
+                </button>
+              
+            </div>
+        </div>
+    </form>
+</div>

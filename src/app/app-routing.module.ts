@@ -6,34 +6,30 @@ import { DirectivesComponent } from './directives/directives.component';
 import { FieldComponent } from './field/field.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { UserformComponent } from './userform/userform.component';
-// import { MainComponent } from './main/main.component';
-import { Observable1Component } from './observable1/observable1.component';
 import { Observebale2Component } from './observebale2/observebale2.component';
+import { Observable1Component } from './observable1/observable1.component';
+import { LoginComponent } from './login/login.component';
 import { PipeComponent } from './pipe/pipe.component';
-
 const routes: Routes = [
   {
-    path: '', redirectTo: "child", pathMatch: "full"
-  },
 
+    path: '', redirectTo: "login", pathMatch: "full"
+  },
+  {
+    path: "login", component: LoginComponent
+
+  },
   {
     path: "child", component: ChildComponent
-  },
-  {
-    path: "app", component: AppComponent
-  },
-  {
-    path: "directive", component: DirectivesComponent
-  },
-  {
-    path: "life-cycle-hooks", component: LifeCycleHooksComponent,
-  },
-  {
-    path: "userform", component: UserformComponent,
+  
   },
   {
     path: "field", component: FieldComponent
   },
+ 
+  // {
+  //   path: "main", component: MainComponent
+  // },
   // {
   //   path:"main",component:MainComponent
   //    },
@@ -43,8 +39,7 @@ const routes: Routes = [
     path: "pipe", component: PipeComponent
   }
 
-
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
