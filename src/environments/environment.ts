@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl:'https://ebraintechnologies.app/goschoolz/'
+  apiUrl:'https://ebraintechnologies.app/goschoolz/',
+  httpUrl:'https://627a10834a5ef80e2c130aa9.mockapi.io/'
 };
 
 /*
